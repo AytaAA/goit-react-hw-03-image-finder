@@ -1,6 +1,6 @@
 import style from "./Button.module.css"
 
-const Button = (onLoadMore) => {
+const Button = ({ onLoadMore }) => {
     return (
         <button onClick={onLoadMore} className={style.button} type="button">
             Load More

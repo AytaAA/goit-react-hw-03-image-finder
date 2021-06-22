@@ -1,10 +1,10 @@
 import ImageGalleryItem from "../ImageGalleryItem"
 import style from "./ImageGallery.module.css"
 
-const ImageGallery = ({ images }) => {
+const ImageGallery = ({ images, handleOpenModal }) => {
     return (
-        <ul className={style.ImageGallery}>
-            <ImageGalleryItem images={images} />
+        <ul className={style.ImageGallery} id="imagesList">
+            <ImageGalleryItem images={images} handleOpenModal={handleOpenModal} />
         </ul>
     )
 }
