@@ -75,11 +75,11 @@ class App extends Component {
                 <Searchbar onSubmit={this.onSubmit} onSetQuery={this.onSetQuery} searchQuery={this.state.searchQuery} />
                 <ImageGallery images={this.state.images} handleOpenModal={this.handleOpenModal} />
                 {this.state.isLoading && <OnLoader />}
-
                 {this.state.showModal && (
                     <Modal modalImage={this.state.modalImage} handleCloseModal={this.handleCloseModal} />
                 )}
-                <Button onLoadMore={this.onLoadMore} />
+
+                {this.state.images.length > 0 && <Button onLoadMore={this.onLoadMore} />}
             </Container>
         )
     }
